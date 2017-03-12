@@ -3,6 +3,12 @@
 ## Build Setup
 
 ``` bash
+# 好习惯
+# 这样每次 npm i xxx --save 的时候会锁定依赖的版本号，相当于加了 --save-exact 参数。
+npm config set save-exact true
+
+#小提示：npm config set 命令将配置写到了 ~/.npmrc 文件，运行 npm config list 查看。
+
 # install dependencies
 npm install
 
@@ -21,6 +27,12 @@ npm run e2e
 # run all tests
 npm test
 ```
+## changelog
+1. 加入eslint语法检查
+2. vuex做状态维护池
+
+
+
 
 ## 多页面配置
 vue2.0版本多页面入口,是由webpack配置来完成的

@@ -1,6 +1,6 @@
 <template>
   <common-page
-    type="a页面type"
+    type="a-class"
     title="a页面title"
     desc="a页面desc">
     <div slot="content">
@@ -13,13 +13,13 @@
   import CommonPage from '../common/common-page.vue'
 
   export default {
-    data() {
+    data () {
       return {
-        
+
       }
     },
     methods: {
-      
+
     },
     components: {
       CommonPage
@@ -27,7 +27,11 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="less">
+  .a-class {
+    h1 {
+      color: red;
+    }
+  }
 </style>
 
