@@ -1,11 +1,20 @@
 <template>
-  <view-box ref="viewBox">
-      <p v-for="1 in 20">{{i}}</p>
-  </view-box>
+   <common-page
+    type="a-class"
+    title="a页面title"
+    desc="a页面desc">
+    <div slot="content">
+      <h1>我是a页面的主体内容</h1>
+      <group title="cell demo">
+        <cell title="Vux" value="Cool" is-link></cell>
+      </group>
+    </div>
+  </common-page>
 </template>
 
 <script type="text/ecmascript-6">
-  import { ViewBox, Group, Cell } from 'vux'
+  import CommonPage from '../common/common-page.vue'
+  import { Group, Cell } from 'vux'
 
   export default {
     data () {
@@ -17,7 +26,7 @@
 
     },
     components: {
-      ViewBox,
+      CommonPage,
       Group,
       Cell
     }

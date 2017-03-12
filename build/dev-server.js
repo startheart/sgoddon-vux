@@ -74,7 +74,7 @@ var uri = 'http://localhost:' + port
 
 devMiddleware.waitUntilValid(function () {
   console.log('> Listening at ' + uri + '\n')
-  console.log('> open url:  ' + uri + '/module/tpl.html' + '\n')
+  console.log('> open url:  ' + uri + '\n')
 })
 
 module.exports = app.listen(port, function (err) {
