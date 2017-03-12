@@ -40,6 +40,7 @@ npm test
 4. vux UI组件库升级到2.x
 5. vue 升级到2.0
 6. webpack 升级到2.0
+7. 增加vConsole 手机上查看控制台
 
 
 
