@@ -85,6 +85,12 @@ vue2.0版本多页面入口,是由webpack配置来完成的
         |---components_tpl   components的模板栗子
         |---module_tpl   无vue-router的单页模块栗子
         |---module_tpl_multi   包含vue-router的多页模块栗子
+      |---.babelrc   babel语法的配置文件
+      |---.editorconfig   编辑器的配置文件 -> 规范接入的同学
+      |---.eslintignore   配置eslint语法检测忽略的文件
+      |---.eslintrc.js   eslint语法检测的配置文件
+      |---.gitignore   git提交忽略的文件
+      |---package.json   依赖包配置
 
 
 
