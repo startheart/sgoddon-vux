@@ -50,18 +50,42 @@ vue2.0版本多页面入口,是由webpack配置来完成的
 比如说，我的项目文件结构如下
 ```
     webpack
-      |---build
-      |---src
-        |---assets 资源
-        |---components组件
-        |---module各个模块
+      |---build  webpack build 的 各个配置文件
+      |---config 不同环境的基础配置
+      |---dist   npm run build 生成的output文件
+      |---node_modules 引用的npm生态圈的模块
+      |---src   项目的根目录
+        |---assets 资源\公共js配置文件\公共less头
+        |---components组件 各module页面可共用的公共组件 也就是网站级组件
+        |---module 各个模块页面 一个模块一个单页 通过配置router也可实现其他页面切换 
+                   这样分模块的原因是：整个网站的所有页面都可以放到同一个仓库里开发 
           |---index    index模块
-            |---index.html
-            |---index.js
-            |---index.vue
-          |---info       info模块
-            |---info.html
-            |---info.js
-            |---info.vue
+            |---api  放置各个服务端接口
+              |---index.js index接口
+            |---components  模块内部的组件 也就是页面级的组件
+              |---header   header组件
+            |---store vuex的store数据模块 各模块划分请参考vuex使用文档
+              |---actions.js
+              |---getters.js
+              |---index.js
+              |---mutation-types.js
+              |---mutation.js
+              |---state.js
+            |---App.vue 模块的主vue 包含模板 逻辑 样式
+            |---index.html 模块的入口html
+            |---index.js 模块的入口js
+              
+          |---module_tpl       tpl模块
+            ... 
+          |---module_tpl_multi       tpl_multi模块
+            ... 
+      |---static   图片等静态资源
+      |---test   测试
+      |---tpl   为了方便生成components 和模块 下面的可以直接复制过去使用
+        |---components_tpl   components的模板栗子
+        |---module_tpl   无vue-router的单页模块栗子
+        |---module_tpl_multi   包含vue-router的多页模块栗子
+
+
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
