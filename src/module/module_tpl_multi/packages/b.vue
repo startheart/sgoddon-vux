@@ -27,7 +27,7 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   .b-class {
     h1 {
       color: green;

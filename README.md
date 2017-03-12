@@ -1,4 +1,6 @@
+# sgoddon-vux
 
+> 基于vux的多页网站demo
 
 ## Build Setup
 
@@ -18,6 +20,9 @@ npm run dev
 # build for production with minification
 npm run build
 
+# build for production and view the bundle analyzer report
+npm run build --report
+
 # run unit tests
 npm run unit
 
@@ -27,9 +32,14 @@ npm run e2e
 # run all tests
 npm test
 ```
+
 ## changelog
 1. 加入eslint语法检查
-2. vuex做状态维护池
+2. vuex 做状态维护池bus http://vuex.vuejs.org/
+3. vue-resource api请求中间件
+4. vux UI组件库升级到2.x
+5. vue 升级到2.0
+6. webpack 升级到2.0
 
 
 
@@ -52,5 +62,5 @@ vue2.0版本多页面入口,是由webpack配置来完成的
             |---info.html
             |---info.js
             |---info.vue
-  ```
 
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

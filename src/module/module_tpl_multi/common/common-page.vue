@@ -44,7 +44,7 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   .common-page {
     position: fixed;
     z-index: 20;

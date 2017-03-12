@@ -3,11 +3,11 @@
     <header class="tpl-bar">
       <h1>tpl router实现多页面</h1>
     </header>
-    <section class="tpl-content" ref="mfct">
+    <section class="tpl-content">
       <ul class="tpl-list">
         <li class="tpl-item" v-for="component in components">
           <router-link class="link" :to="component.path">{{component.text}}<i
-              class="mfic-click"></i>
+              class="tpl-click"></i>
           </router-link>
         </li>
       </ul>
@@ -20,7 +20,7 @@
 
 <script type="text/ecmascript-6">
   export default {
-    data() {
+    data () {
       return {
         components: [
           {
@@ -34,13 +34,14 @@
         ]
       }
     },
-    mounted() {
+    mounted () {
 
     }
   }
 </script>
 
 <style lang="less">
+  @import '~vux/src/styles/reset.less';
   .tpl-bar {
     position: fixed;
     z-index: 10;
@@ -78,7 +79,7 @@
           color: #333;
           text-decoration: none;
           outline: 0;
-          .mfic-click {
+          .tpl-click {
             position: absolute;
             right: 0;
             padding: 0 5px;
@@ -86,7 +87,7 @@
             color: #ccc;
 
             &:before {
-              content: "\E60B";
+              content: ">";
             }
           }
         }

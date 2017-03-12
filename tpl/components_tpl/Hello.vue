@@ -1,10 +1,16 @@
 <template>
   <div class="hello">
     <h1>tpl --- {{ msg }}</h1>
+    <group title="cell demo">
+      <cell title="Vux" value="Cool" is-link></cell>
+    </group>
   </div>
 </template>
 
 <script>
+
+import { Group, Cell } from 'vux'
+
 const COMPONENT_NAME = 'hello'
 
 export default {
@@ -27,13 +33,12 @@ export default {
 
   },
   components: {
-
+    Group,
+    Cell
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less">
+<style lang="less" scoped>
 
 </style>
-

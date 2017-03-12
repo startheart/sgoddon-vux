@@ -2,7 +2,7 @@
   <div class="common-page" :class="type">
     <header class="header">
       <h1>{{title}}</h1>
-      <i @click="back" class="mfic-back"></i>
+      <i @click="back" class="common-back"></i>
     </header>
     <div class="wrapper">
       <section v-show="desc" class="desc">
@@ -37,14 +37,14 @@
       }
     },
     methods: {
-      back() {
+      back () {
         this.$router.back()
       }
     }
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   .common-page {
     position: fixed;
     z-index: 20;
@@ -67,7 +67,7 @@
         font-size: 16px;
         font-weight: 700;
       }
-      .mfic-back {
+      .common-back {
         position: absolute;
         top: 0;
         left: 0;
@@ -77,7 +77,7 @@
         font-style: normal;
 
         &:before {
-          content: "\E608";
+          content: "<";
         }
       }
     }
