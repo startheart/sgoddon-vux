@@ -6,6 +6,9 @@ const mutations = {
   },
   [types.UPDATE_TESTAPI_DATA] (state, testApiData) {
     state.testApiData = testApiData
+  },
+  [types.UPDATE_TIMES] (state, times) {
+    state.times = times
   }
 }
 

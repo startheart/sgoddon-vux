@@ -4,9 +4,9 @@
     title="a页面title"
     desc="a页面desc">
     <div slot="content">
-      <h1>我是a页面的主体内容</h1>
+      <h1>我是a页面的主体内容 计时器 {{times}} 秒</h1>
       <group title="cell demo">
-        <cell title="Vux" value="Cool" is-link></cell>
+        <cell title="sgoddon" value="Cool" is-link></cell>
       </group>
     </div>
   </common-page>
@@ -19,11 +19,19 @@
   export default {
     data () {
       return {
-
+        times: 0
       }
     },
-    methods: {
+    computed: {
 
+    },
+    methods: {
+      addTimes () {
+        return ++this.times
+      }
+    },
+    mounted () {
+      setInterval(this.addTimes, 1000)
     },
     components: {
       CommonPage,
