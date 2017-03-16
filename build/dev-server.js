@@ -20,6 +20,7 @@ var port = process.env.PORT || config.dev.port
 var autoOpenBrowser = !!config.dev.autoOpenBrowser
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
+// 使用 config.dev.proxyTable 的配置作为 proxyTable 的代理配置
 var proxyTable = config.dev.proxyTable
 
 var app = express()
@@ -40,13 +41,16 @@ compiler.plugin('compilation', function (compilation) {
     cb()
   })
 })
-
+// 将 proxyTable 中的请求配置挂在到启动的 express 服务上
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
   if (typeof options === 'string') {
     options = { target: options }
   }
+  console.log('options', options)
+  console.log('context', context)
+
   app.use(proxyMiddleware(options.filter || context, options))
 })
 

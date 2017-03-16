@@ -27,7 +27,13 @@ module.exports = {
     autoOpenBrowser: false,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 需要 proxyTable 代理的接口（可跨域）
+    proxyTable: {
+      '/mvc/blog/CategoriesTags.aspx': {
+        target: 'http://www.cnblogs.com',
+        changeOrigin: true
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

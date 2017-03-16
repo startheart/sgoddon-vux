@@ -4,27 +4,24 @@ import {REQUEST_SUCCESS, REQUEST_PENDING, REQUEST_FAIL} from 'assets/js/env-glob
 
 const ERR_OK = '0'
 
-export const getTestData = function ({commit, state, rootState}) {
+export const getTestData = function ({commit, state, rootState}, params) {
   commit(types.UPDATE_TESTAPI_REQUEST, REQUEST_PENDING)
 
   return new Promise((resolve, reject) => {
-    return testApi({
-      a: 1,
-      b: 2
-    }).then((res) => {
-      if (res.errno === ERR_OK) {
+    return testApi(params).then((res) => {
+      if (res.status === ERR_OK) {
         commit(types.UPDATE_TESTAPI_REQUEST, REQUEST_SUCCESS)
         commit(types.UPDATE_TESTAPI_DATA, res.data)
-        return res.data
+        resolve(res.data)
       } else {
         commit(types.UPDATE_TESTAPI_REQUEST, REQUEST_FAIL)
-        return Promise.reject(res)
+        reject(res)
       }
     }).catch((res) => {
       res.type = 'fail'
       commit(types.UPDATE_TESTAPI_REQUEST, REQUEST_FAIL)
       commit(types.UPDATE_TESTAPI_DATA, res)
-      return Promise.reject(res)
+      reject(res)
     })
   })
 }
