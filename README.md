@@ -57,8 +57,8 @@ vue2.0版本多页面入口,是由webpack配置来完成的
       |---src   项目的根目录
         |---assets 资源\公共js配置文件\公共less头
         |---components组件 各module页面可共用的公共组件 也就是网站级组件
-        |---module 各个模块页面 一个模块一个单页 通过配置router也可实现其他页面切换 
-                   这样分模块的原因是：整个网站的所有页面都可以放到同一个仓库里开发 
+        |---module 各个模块页面 一个模块一个单页 通过配置router也可实现其他页面切换
+                   这样分模块的原因是：整个网站的所有页面都可以放到同一个仓库里开发
           |---index    index模块
             |---api  放置各个服务端接口
               |---index.js index接口
@@ -74,11 +74,11 @@ vue2.0版本多页面入口,是由webpack配置来完成的
             |---App.vue 模块的主vue 包含模板 逻辑 样式
             |---index.html 模块的入口html
             |---index.js 模块的入口js
-              
+
           |---module_tpl       tpl模块
-            ... 
+            ...
           |---module_tpl_multi       tpl_multi模块
-            ... 
+            ...
       |---static   图片等静态资源
       |---test   测试
       |---tpl   为了方便生成components 和模块 下面的可以直接复制过去使用
@@ -91,7 +91,5 @@ vue2.0版本多页面入口,是由webpack配置来完成的
       |---.eslintrc.js   eslint语法检测的配置文件
       |---.gitignore   git提交忽略的文件
       |---package.json   依赖包配置
-
-
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
