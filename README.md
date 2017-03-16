@@ -2,6 +2,15 @@
 
 > 基于vux的多页网站demo
 
+## 技术栈
+- MVVM框架： Vue 2.0
+- 源码：es6
+- 代码风格检查：eslint
+- 构建工具：webpack2.0
+- 前端路由：vue-router
+- 状态管理：vuex
+- 服务端通讯：vue-resource
+
 ## Build Setup
 
 ``` bash
