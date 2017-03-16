@@ -1,6 +1,6 @@
 # sgoddon-vux
 
-> 基于vux的多页网站demo
+> 基于vue2.0的多页网站demo
 
 ## 技术栈
 - MVVM框架： Vue 2.0
