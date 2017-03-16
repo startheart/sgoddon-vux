@@ -1,0 +1,12 @@
+{
+  "name": "vux-nuxt",
+  "scripts": {
+    "start": "nuxt"
+  },
+  "dependencies": {
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "nuxt": "^0.9.9",
+    "vux": "^2.1.0-rc.51"
+  }
+}

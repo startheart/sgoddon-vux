@@ -37,8 +37,13 @@ const router = new VueRouter({
 new Vue({
   router,
   store,
-  render (h) {
-    return h(App)
+  el: '#app',
+  template: '<App/>',
+  components: {
+    App
   }
+  // render (h) {
+  //   return h(App)
+  // }
 }).$mount('#app')
 

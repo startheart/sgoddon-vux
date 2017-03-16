@@ -30,6 +30,7 @@ var webpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      // 'vue$': 'vue/src/entries/web-runtime-with-compiler.js',
       '@': resolve('src'),
       'src': resolve('src'),
       'assets': resolve('src/assets'),
