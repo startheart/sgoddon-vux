@@ -1,5 +1,5 @@
 <template>
-  <common-page
+   <common-page
     type="a-class"
     title="a页面title"
     desc="a页面desc">
@@ -40,4 +40,3 @@
     }
   }
 </style>
-

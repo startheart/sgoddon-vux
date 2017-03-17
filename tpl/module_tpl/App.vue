@@ -28,7 +28,15 @@
     },
     mounted () {
       this.$nextTick(() => {
-        this.getTestData()
+        this.getTestData({
+          blogApp: 'ghost-xyx',
+          blogId: '179301',
+          postId: '5248323'
+        }).then(res => {
+          console.log('getTestData res', res)
+        }).catch(err => {
+          console.log('getTestData catch err', err)
+        })
       })
     }
   }

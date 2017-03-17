@@ -10,7 +10,7 @@ import B from './packages/b.vue'
 
 // TODO 需要使用 vConsole 的同学请打开注释即可
 /* eslint-disable no-unused-vars */
-// import vConsole from 'vconsole'
+import vConsole from 'vconsole'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
