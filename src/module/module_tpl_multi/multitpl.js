@@ -37,11 +37,6 @@ const router = new VueRouter({
 new Vue({
   router,
   store,
-  // el: '#app',
-  // template: '<App/>',
-  // components: {
-  //   App
-  // }
   render (h) {
     return h(App)
   }
